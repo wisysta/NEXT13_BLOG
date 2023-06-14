@@ -79,6 +79,19 @@ export const DUMMY_POSTS: Post[] = [
         date_created: "2021-07-06T00:00:00.000Z",
         date_updated: "2021-07-06T00:00:00.000Z",
     },
+    {
+        id: "7",
+        title: "Joining the elephants in the wild: Thailand",
+        description:
+            "Thailand is a country in Southeast Asia. It is known for its tropical beaches, opulent royal palaces, ancient ruins, and ornate temples displaying figures of Buddha.",
+        category: { id: "2", title: "Experiences" },
+        author: { id: "1", first_name: "John", last_name: "Doe" },
+        slug: "joining-the-elephants-in-the-wild-thailand",
+        image: "https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?ixid=MnwzODU2NTF8MHwxfHNlYXJjaHwxOHx8RWxlcGhhbnRzJTIwdGhhaWxhbmR8ZW58MHx8fHwxNjcwMzIyNzUx&ixlib=rb-4.0.3",
+        body: "Thailand is a country in Southeast Asia. It is known for its tropical beaches, opulent royal palaces, ancient ruins, and ornate temples displaying figures of Buddha. It is also home to many exotic animals, including elephants, tigers, and monkeys. Thailand is a popular tourist destination, with many visitors coming to see the country's natural wonders.",
+        date_created: "2021-07-06T00:00:00.000Z",
+        date_updated: "2021-07-06T00:00:00.000Z",
+    },
 ];
 
 export const DUMMY_CATEGORIES: Category[] = [
