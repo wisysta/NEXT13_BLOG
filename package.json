@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@directus/sdk": "^10.3.3",
         "@tailwindcss/container-queries": "^0.1.1",
         "@types/node": "20.3.1",
         "@types/react": "18.2.12",
@@ -16,6 +17,7 @@
         "autoprefixer": "10.4.14",
         "eslint": "8.42.0",
         "eslint-config-next": "13.4.5",
+        "html-react-parser": "^4.0.0",
         "lucide-react": "^0.244.0",
         "luxon": "^3.3.0",
         "next": "13.4.5",
