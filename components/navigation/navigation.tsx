@@ -1,22 +1,32 @@
+import { getDictionary } from "@/lib/getDictionary";
 import Link from "next/link";
-import React from "react";
 import PaddingContainer from "../layout/padding-container";
+import LangSwitcher from "./lang-switcher";
 
-const Navigation = () => {
+const Navigation = async ({ locale }: { locale: string }) => {
+    const dictionary = await getDictionary(locale);
     return (
-        <div className="sticky border-b top-0 z-[999] border-0 bg-white bg-opacity-50 backdrop-blur-md">
+        <div className="sticky top-0 z-[999] left-0 right-0 bg-white bg-opacity-50 border-b backdrop-blur-md">
             <PaddingContainer>
-                <div className="py-6 flex items-center justify-between ">
-                    <Link className="text-lg font-bold" href="">
+                <div className="flex items-center justify-between py-5">
+                    <Link className="text-lg font-bold" href={`/${locale}`}>
                         Explorer
                     </Link>
+                    {/* Category Links */}
                     <nav>
                         <ul className="flex items-center gap-4 text-neutral-600">
                             <li>
-                                <Link href="/cities">Cities</Link>
+                                <LangSwitcher locale={locale} />
                             </li>
                             <li>
-                                <Link href="/experiences">Experiences</Link>
+                                <Link href={`/${locale}/cities`}>
+                                    {dictionary.navigation.links.cities}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={`/${locale}/experiences`}>
+                                    {dictionary.navigation.links.experience}
+                                </Link>
                             </li>
                         </ul>
                     </nav>
